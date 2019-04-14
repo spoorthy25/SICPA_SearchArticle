@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SU3-bo-oDc">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Article View Controller-->
+        <scene sceneID="iIa-AQ-FuD">
+            <objects>
+                <viewController id="SU3-bo-oDc" customClass="SearchArticleViewController" customModule="ArticleSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nv1-85-1FE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Articles Here..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-wA-hYf">
+                                <rect key="frame" x="20" y="104" width="370" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wLi-OA-REb">
+                                <rect key="frame" x="148" y="154" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchArticle:" destination="SU3-bo-oDc" eventType="touchUpInside" id="92M-Xv-Ig7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wLi-OA-REb" firstAttribute="leading" secondItem="ajN-J7-Zth" secondAttribute="leading" constant="148" id="LKZ-V0-RI3"/>
+                            <constraint firstItem="ajN-J7-Zth" firstAttribute="trailing" secondItem="ftp-wA-hYf" secondAttribute="trailing" constant="24" id="LS4-q7-GV8"/>
+                            <constraint firstItem="ftp-wA-hYf" firstAttribute="top" secondItem="ajN-J7-Zth" secondAttribute="top" constant="60" id="ODI-5J-7cp"/>
+                            <constraint firstItem="wLi-OA-REb" firstAttribute="top" secondItem="ftp-wA-hYf" secondAttribute="bottom" constant="20" id="OXA-eN-e2e"/>
+                            <constraint firstItem="ftp-wA-hYf" firstAttribute="leading" secondItem="ajN-J7-Zth" secondAttribute="leading" constant="20" id="fkf-z4-CiR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ajN-J7-Zth"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchTextField" destination="ftp-wA-hYf" id="TWR-x7-2DR"/>
+                        <segue destination="vPA-bL-9So" kind="show" identifier="ArticleResult" id="Ov8-XA-AeL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hob-D8-zCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.260869565217391" y="100.44642857142857"/>
+        </scene>
+        <!--ArticlesView-->
+        <scene sceneID="l0v-Ga-I2q">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ArticlesView" id="vPA-bL-9So" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KLf-WP-5Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-65"/>
+        </scene>
+    </scenes>
+</document>
